@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const InputContainer = ({ translateFunction, inputChecker }) => {
+const MorseInput = ({ translateFunction, inputChecker }) => {
   const [input, setInput] = useState();
   const [result, setResult] = useState("");
 
@@ -17,23 +17,23 @@ const InputContainer = ({ translateFunction, inputChecker }) => {
     setResult(translateFunction(input));
   };
   //altering user for unsupported character and removing from state
-  if (/[^A-Za-z0-9\s]/.test(input)) {
+  if (/[^\s.-]+/.test(input)) {
     alert("Unsupported characters entered- removing character");
     setInput(input.slice(0, -1));
   }
 
   return (
     <div>
-      <label htmlFor="englishInput">Input english to convert here: </label>
+      <label htmlFor="morseInput">Input morsecode to convert here: </label>
       <textarea
-        name="englishInput"
+        name="morseInput"
         onChange={handleChange}
         value={input}
       ></textarea>
       <button onClick={handleClick}>Press to convert</button>
-      <div> Encoded message :{result}</div>
+      <div> Decoded message :{result}</div>
     </div>
   );
 };
 
-export default InputContainer;
+export default MorseInput;
