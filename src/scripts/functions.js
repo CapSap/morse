@@ -59,7 +59,13 @@ export const encode = (input) => {
 };
 
 export const decode = (input) => {
-  const array = input.split(" ");
-  const result = array.map((character) => alphabet[character]);
-  return result.join("");
+  if (/[\s.-]+/.test(input)) {
+    const array = input.split(" ");
+    const result = array.map((character) => alphabet[character]);
+    return result.join("");
+  } else {
+    throw new Error(
+      "Unsupported characters entered- please use period, dash and slash only(. - /)"
+    );
+  }
 };
