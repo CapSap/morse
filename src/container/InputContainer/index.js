@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const InputContainer = ({ translateFunction, inputChecker }) => {
+const InputContainer = ({ translateFunction }) => {
   const [input, setInput] = useState();
   const [result, setResult] = useState("");
 
