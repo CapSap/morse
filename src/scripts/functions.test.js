@@ -12,7 +12,9 @@ describe("encode function tests", () => {
     expect(encode("A")).toBe(".-");
   });
 
-  it("should throw an error and give user feedback if any not alphabet, spaces or numbers are inputed", () => {});
+  it("should throw an error and give user feedback if any not alphabet, spaces or numbers are inputed", () => {
+    expect(() => encode(".-")).toThrow("Unsupported");
+  });
 
   it("should translate morse code into englis", () => {});
 });
@@ -24,5 +26,8 @@ describe("decode function tests", () => {
     expect(decode(".... . .-.. .-.. --- / ..-. .-. .. . -. -.. ...")).toBe(
       "hello friends"
     );
+  });
+  it("should throw an error if any invalid characters are entered. ie . = / ", () => {
+    expect(() => decode("hello")).toThrow("Unsupported");
   });
 });
