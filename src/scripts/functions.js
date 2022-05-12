@@ -42,6 +42,11 @@ const alphabet = {
 };
 
 export const encode = (input) => {
+  if (/[^A-Za-z0-9\s]/.test(input)) {
+    throw new Error(
+      "Unsupported characters entered- please use letters of the alphabet, spaces and numbers only"
+    );
+  }
   const array = input.toLowerCase().split("");
 
   const result = array.map((character) => {
