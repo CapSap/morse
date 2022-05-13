@@ -1,0 +1,11 @@
+@use "../../scss/pallet";
+
+.container {
+  text-align: center;
+}
+
+.heading {
+  font-weight: bold;
+  margin: 0;
+  color: pallet.$title;
+}

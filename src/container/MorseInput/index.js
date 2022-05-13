@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./MorseInput.module.scss";
 
 const MorseInput = ({ translateFunction, inputChecker }) => {
   const [input, setInput] = useState();
@@ -16,6 +17,7 @@ const MorseInput = ({ translateFunction, inputChecker }) => {
     console.log(input);
     setResult(translateFunction(input));
   };
+
   //altering user for unsupported character and removing from state
   if (input && /[^\s.\-/]+/.test(input)) {
     alert("Unsupported characters entered- removing character");
@@ -23,15 +25,18 @@ const MorseInput = ({ translateFunction, inputChecker }) => {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <label htmlFor="morseInput">Input morsecode to convert here: </label>
       <textarea
+        className={styles.input}
         name="morseInput"
         onChange={handleChange}
         value={input}
       ></textarea>
-      <button onClick={handleClick}>Press to convert</button>
-      <div> Decoded message :{result}</div>
+      <button className={styles.button} onClick={handleClick}>
+        Press to convert
+      </button>
+      <div className={styles.message}> Decoded message :{result}</div>
     </div>
   );
 };

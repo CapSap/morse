@@ -1,0 +1,8 @@
+@use "pallet";
+
+.App {
+  background-color: pallet.$bg-color;
+  margin: 0;
+  color: pallet.$darkerTeal;
+  min-height: 100vh;
+}
