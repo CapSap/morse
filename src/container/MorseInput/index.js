@@ -17,6 +17,7 @@ const MorseInput = ({ translateFunction, inputChecker }) => {
     console.log(input);
     setResult(translateFunction(input));
   };
+
   //altering user for unsupported character and removing from state
   if (input && /[^\s.\-/]+/.test(input)) {
     alert("Unsupported characters entered- removing character");
