@@ -36,4 +36,4 @@ It would be good to remove that function from the component so that the componen
 
 ## Screenshot
 
-('./screenshot.png')
+![screenshot of app](https://raw.githubusercontent.com/CapSap/morse/master/screenshot.png)
