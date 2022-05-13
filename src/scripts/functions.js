@@ -60,9 +60,10 @@ export const encode = (input) => {
 
 export const decode = (input) => {
   if (/[\s.-]+/.test(input)) {
-    const array = input.split("/");
+    const array = input.split(" ");
+    console.log(array);
     const result = array.map((character) => alphabet[character] ?? "#");
-    return result.join(" ");
+    return result.join("");
   } else {
     throw new Error(
       "Unsupported characters entered- please use period, dash and slash only(. - /)"
