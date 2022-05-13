@@ -31,7 +31,7 @@ describe("decode function tests", () => {
     expect(() => decode("hello")).toThrow("Unsupported");
   });
 
-  it();
-
-  expect(decode("...........")).toBe("#");
+  it("expect # to be in place of unknown dits dah combo", () => {
+    expect(decode("...........")).toBe("#");
+  });
 });
