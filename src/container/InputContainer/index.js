@@ -27,11 +27,14 @@ const InputContainer = ({ translateFunction }) => {
     <div className={styles.container}>
       <label htmlFor="englishInput">Input english to convert here: </label>
       <textarea
+        className={styles.input}
         name="englishInput"
         onChange={handleChange}
         value={input}
       ></textarea>
-      <button onClick={handleClick}>Press to convert</button>
+      <button className={styles.button} onClick={handleClick}>
+        Press to convert
+      </button>
       <div className={styles.message}> Encoded message: {result}</div>
     </div>
   );
