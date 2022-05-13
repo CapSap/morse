@@ -1,9 +1,14 @@
+import styles from "./Heading.module.scss";
+
 const Heading = () => {
   return (
-    <div>
-      <h1>Morse Code Keyer</h1>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Morse Code Keyer</h1>
       <p>Turn your dits and dahs into english or vice reversa</p>
-      <p>you must place a space inbetween your mose code characters</p>
+      <p>
+        Please note you must place a space inbetween your mose code characters.
+        Happy coding
+      </p>
     </div>
   );
 };

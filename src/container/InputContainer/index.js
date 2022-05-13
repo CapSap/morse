@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./InputContainer.module.scss";
 
 const InputContainer = ({ translateFunction }) => {
   const [input, setInput] = useState();
@@ -23,7 +24,7 @@ const InputContainer = ({ translateFunction }) => {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <label htmlFor="englishInput">Input english to convert here: </label>
       <textarea
         name="englishInput"
@@ -31,7 +32,7 @@ const InputContainer = ({ translateFunction }) => {
         value={input}
       ></textarea>
       <button onClick={handleClick}>Press to convert</button>
-      <div> Encoded message :{result}</div>
+      <div className={styles.message}> Encoded message: {result}</div>
     </div>
   );
 };

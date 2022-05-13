@@ -1,0 +1,19 @@
+@use "../../scss/pallet";
+
+.container {
+  display: flex;
+  border: 3px solid pallet.$red;
+  width: 700px;
+  margin: auto;
+  padding: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.message {
+  padding: 20px;
+  background-color: pallet.$message;
+  min-width: 200px;
+  flex-basis: 90%;
+  color: pallet.$title;
+}
