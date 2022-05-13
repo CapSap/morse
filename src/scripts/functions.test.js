@@ -30,4 +30,8 @@ describe("decode function tests", () => {
   it("should throw an error if any invalid characters are entered. ie . = / ", () => {
     expect(() => decode("hello")).toThrow("Unsupported");
   });
+
+  it();
+
+  expect(decode("...........")).toBe("#");
 });

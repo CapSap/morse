@@ -61,7 +61,7 @@ export const encode = (input) => {
 export const decode = (input) => {
   if (/[\s.-]+/.test(input)) {
     const array = input.split("/");
-    const result = array.map((character) => alphabet[character] ?? "not found");
+    const result = array.map((character) => alphabet[character] ?? "#");
     return result.join(" ");
   } else {
     throw new Error(
